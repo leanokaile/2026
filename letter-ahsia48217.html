@@ -1,35 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Your Letter</title>
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Georgia, serif;
-      background-color: #fff6f0;
-      padding: 40px;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fce7f3, #fff7ed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .letter {
+      background: #ffffff;
+      max-width: 600px;
+      width: 90%;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.05rem;
       line-height: 1.8;
+      margin-bottom: 18px;
+      opacity: 0;
+      animation: reveal 1s ease forwards;
+    }
+
+    p:nth-child(2) { animation-delay: 0.3s; }
+    p:nth-child(3) { animation-delay: 0.6s; }
+    p:nth-child(4) { animation-delay: 0.9s; }
+    p:nth-child(5) { animation-delay: 1.2s; }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>My dearest continent,</h1>
+  <div class="letter">
+    <h1>My dearest continent,</h1>
 
-  <p>
-    Some events of 2025 has been literal shit to us, be it academically, emotionally, financially, and  physically. 
+    <p>
+      Some events of 2025 has been literal shit to us, be it academically, emotionally, financially, and  physically. 
     But it wouldn't be as tolerable if it weren't for you. Thank you for always having my back, my arms, my head—okay, my everything.
     I onced asked God what I have done to deserve all the bad karma I got until I got tired and asked "What have I done to deserve you?" instead.
-  </p>
+    </p>
 
-  <p>
-    You're a literal sunshine. Thank you for always bringing my perspective into new light as well as directing me on different poses depending on the lighting. 
-    
-  </p>
+    <p>
+      You're a literal sunshine. Thank you for always bringing my perspective into new light as well as directing me on different poses depending on the lighting.
+      I hope you give yourself more credit than you often lead on. I can't stress how much smart and talented you are.
+      So instead, I'll just do my best to become someone who is deserving of you. 
+    </p>
 
-  <p>
-    — kai
-  </p>
+    <p>
+      This is me writing to you to, looking forward to a new year, new experiences, new heartaches and sleepless nights.
+      Know that none of those can bring us down. I got you just as much as you got me. 
+    </p>
+
+    <p>
+      Happy New Year! I love you! 
+    </p>
+
+    <p class="signature">
+      — Kai
+    </p>
+  </div>
 
 </body>
 </html>
+
