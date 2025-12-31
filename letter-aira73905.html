@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Letter</title>
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fce7f3, #fff7ed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .letter {
+      background: #ffffff;
+      max-width: 600px;
+      width: 90%;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      opacity: 0;
+      animation: reveal 1s ease forwards;
+    }
+
+    p:nth-child(2) { animation-delay: 0.3s; }
+    p:nth-child(3) { animation-delay: 0.6s; }
+    p:nth-child(4) { animation-delay: 0.9s; }
+    p:nth-child(5) { animation-delay: 1.2s; }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="letter">
+    <h1>My penguu addict friend,</h1>
+
+    <p>
+     I remember the time you called me by my nickname: "Yumi".
+      I thought 'finally, something familiar'.
+      We never really talk much. You're always glued to either Thea or Lawrence.
+      But when we finally did, I'm glad it's not all acads stuff.
+    </p>
+
+    <p>
+      I very much enjoy your enthusiasm with penguins and capybaras, your list of anime and movies to watch, as well as your pile of books to read.
+      I'm glad I have more than a year to unlock more of these kinds of conversation with you, even if it's seldom.
+      You must know that I am open to any kind of conversation, as long as it's with you. 
+    </p>
+
+    <p>
+      Happy New Year! Cheers! 
+    </p>
+
+    <p class="signature">
+      — Kai
+    </p>
+  </div>
+
+</body>
+</html>
 
