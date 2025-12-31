@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Letter</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #fdf2f8, #f8fafc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .paper {
+      position: relative;
+      max-width: 620px;
+      width: 100%;
+      padding: 50px 40px;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(0,0,0,0.02),
+          rgba(0,0,0,0.02) 1px,
+          transparent 1px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(0,0,0,0.015),
+          rgba(0,0,0,0.015) 1px,
+          transparent 1px,
+          transparent 5px
+        ),
+        #fffefb;
+      box-shadow:
+        0 30px 60px rgba(0,0,0,0.2),
+        inset 0 0 30px rgba(255,255,255,0.6);
+      animation: fadeIn 1.3s ease;
+    }
+
+    /* Torn top edge */
+    .paper::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background:
+        radial-gradient(circle at 10% 100%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 25% 100%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 40% 100%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 55% 100%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 70% 100%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 85% 100%, transparent 60%, #fffefb 62%);
+      background-size: 80px 24px;
+    }
+
+    /* Torn bottom edge */
+    .paper::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background:
+        radial-gradient(circle at 15% 0%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 30% 0%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 45% 0%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 60% 0%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 75% 0%, transparent 60%, #fffefb 62%),
+        radial-gradient(circle at 90% 0%, transparent 60%, #fffefb 62%);
+      background-size: 80px 24px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: reveal 1s ease forwards;
+    }
+
+    p:nth-of-type(1) { animation-delay: 0.3s; }
+    p:nth-of-type(2) { animation-delay: 0.6s; }
+    p:nth-of-type(3) { animation-delay: 0.9s; }
+    p:nth-of-type(4) { animation-delay: 1.2s; }
+
+    .signature {
+      margin-top: 35px;
+      font-style: italic;
+      opacity: 0.75;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="paper">
+    <h1>My dearest cutie patootie,</h1>
+
+    <p>
+      I love your randomness and all your quirks. Your patience is immaculate and I'd lve love love to spend more time with you.
+      Thank God 2026 is here for that... and many many more years to come! I may not verbally say this, but I love you teeeeh. 
+      You inspire me in many ways  I can't explain. 
+    </p>
+
+    <p>
+      To more rants, heartaches, and experiences with you, Myra! Happy New Year and Cheers!
+    </p>
+
+    <p class="signature">
+      — Kai
+    </p>
+  </div>
+
+</body>
+</html>
 
